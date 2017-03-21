@@ -1,0 +1,41 @@
+<form class="form-horizontal" ng-controller="registerCtrl as rc">
+    <div class="form-group">
+      <label class="col-lg-2 control-label">First Name</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" placeholder="First Name" ng-model="rc.user.firstName">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Gender</label>
+      <div class="col-lg-10">
+          <input type="radio" name="gender" value="M" ng-model="rc.user.gender">Male
+          <input type="radio" name="gender" value="F" ng-model="rc.user.gender">Female
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Country</label>
+      <div class="col-lg-10">
+        <select ng-model="rc.selectedCountry" class="form-control" ng-options="country.code + '-' + country.name for country in rc.countries">
+            <option value="">Select your Country</option>
+        </select>
+        {{rc.selectedCountry}}
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Password</label>
+      <div class="col-lg-10">
+        <input type="password" class="form-control" placeholder="Password" ng-model="rc.user.password">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="rc.user.iAgree"> I Agree
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary" ng-click="rc.register()" ng-disabled="!rc.user.iAgree">Register</button>
+      </div>
+    </div>
+    {{rc.user}}
+</form>
