@@ -1,7 +1,7 @@
 (function(){
     
     // module creation
-    angular.module("goodServices", ["login", "register", "header", "common"]);
+    angular.module("goodServices", ["login", "register", "header", "common", "products"]);
     
     //consuming module
     angular.module("goodServices")

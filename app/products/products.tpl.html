@@ -1,0 +1,15 @@
+<div class="row" ng-controller="productsCtrl as pc">
+    <div ng-repeat="product in pc.products">
+        <div class="col-xs-6">
+            <div class="thumbnail">
+                <img src="image/{{product.Image}}" alt="Sample Image">
+                <div class="caption">
+                    <h3>{{product.Model}}</h3>
+                    <p>{{product.Description}}</p>
+                    <p>{{product.Price}}</p>
+                    <p><a href="#" class="btn btn-primary">Share</a> <a href="#" class="btn btn-default">Download</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{
+    "products": [
+        {
+            "Price": 70000,
+            "Description": "iPhone 7 smartphone was launched in September 2016. The phone comes with a 4.70-inch touchscreen display with a resolution of 750 pixels by 1334 pixels at a PPI of 326 pixels per inch. ... The Apple iPhone 7 is powered by quad-core Apple A10 Fusion processor and it comes with 2GB of RAM.",
+            "Model": "iPhone 7s",
+            "Image": "iphone7.jpg"
+        },
+        {
+            "Price": 50000,
+            "Description": "Samsung is the largest mobile phone maker in its home market of South Korea, and the third largest in the world.",
+            "Model": "Samsung",
+            "Image": "samsung.jpg"
+        },
+        {
+            "Price": 20000,
+            "Description": "Sony Xperia Z4 smartphone was launched in April 2015. The phone comes with a 5.20-inch touchscreen display with a resolution of 1080 pixels by 1920 pixels.",
+            "Model": "Sony Xperia Z4",
+            "Image": "sony.jpg"
+        }
+    ]
+}
