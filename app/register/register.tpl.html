@@ -13,9 +13,21 @@
       </div>
     </div>
     <div class="form-group">
+      <label class="col-lg-2 control-label">Date of Birth</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" placeholder="Date of Birth" ng-model="rc.user.DOB" maxdate="+1Y" cm-date-picker>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-lg-2 control-label">Date of Reservation</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" placeholder="Date of Reservation" ng-model="rc.user.reserv" mindate="0D" maxdate="+1M" cm-date-picker>
+      </div>
+    </div>
+    <div class="form-group">
       <label class="col-lg-2 control-label">Phone Number</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" placeholder="Phone Number" ng-model="rc.user.phone" maxNumbers="10" cm-numbers-only>
+        <input type="text" class="form-control" placeholder="Phone Number" ng-model="rc.user.phone" maxNumbers="9" cm-numbers-only>
       </div>
     </div>
     <div class="form-group">
