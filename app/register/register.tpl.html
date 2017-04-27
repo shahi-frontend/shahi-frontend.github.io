@@ -1,8 +1,10 @@
-<form class="form-horizontal" ng-controller="registerCtrl as rc">
+<form name="regForm" class="form-horizontal" ng-controller="registerCtrl as rc">
     <div class="form-group">
       <label class="col-lg-2 control-label">First Name</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" placeholder="First Name" ng-model="rc.user.firstName">
+        <input type="text" name="firstName" class="form-control" placeholder="First Name" ng-model="rc.user.firstName" ng-required="true" ng-pattern="/^[a-zA-Z][a-zA-Z\\s]+$/">
+        <p ng-show="regForm.firstName.$error.required && regForm.firstName.$dirty">First Name Required*</p>
+        <p ng-show="regForm.firstName.$error.pattern">Alphabets only*</p>
       </div>
     </div>
     <div class="form-group">
@@ -27,7 +29,9 @@
     <div class="form-group">
       <label class="col-lg-2 control-label">Phone Number</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" placeholder="Phone Number" ng-model="rc.user.phone" maxNumbers="9" cm-numbers-only>
+        <input type="text" class="form-control" name="phone" placeholder="Phone Number" ng-model="rc.user.phone" maxNumbers="9" cm-numbers-only ng-required="true" ng-minlength="10">
+        <p ng-show="regForm.phone.$error.required">Phone Number Required*</p>
+        <p ng-show="regForm.phone.$error.minlength">Phone Number should be of 10 digits*</p>
       </div>
     </div>
     <div class="form-group">
@@ -58,7 +62,7 @@
     </div>
     <div class="form-group">
       <div class="col-lg-10 col-lg-offset-2">
-        <button type="submit" class="btn btn-primary" ng-click="rc.register()" ng-disabled="!rc.user.iAgree">Register</button>
+        <button type="submit" class="btn btn-primary" ng-click="rc.register()" ng-disabled="regForm.$invalid">Register</button>
       </div>
     </div>
     {{rc.user}}
